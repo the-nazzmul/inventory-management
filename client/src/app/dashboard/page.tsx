@@ -1,6 +1,8 @@
-import PopularProductsCard from "@/components/dashboard/PopularProductsCard";
-import PurchaseSummaryCard from "@/components/dashboard/PurchaseSummaryCard";
-import SalesSummaryCard from "@/components/dashboard/SalesSummaryCard";
+"use client";
+
+import PopularProductsCard from "@/components/dashboard/cards/PopularProductsCard";
+import PurchaseSummaryCard from "@/components/dashboard/cards/PurchaseSummaryCard";
+import SalesSummaryCard from "@/components/dashboard/cards/SalesSummaryCard";
 
 const Dashboard = () => {
   return (

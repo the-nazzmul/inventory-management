@@ -1,9 +1,15 @@
-"use client";
-
 import { useGetDashboardMetricsQuery } from "@/state/api";
 import { TrendingUp } from "lucide-react";
 import React, { useState } from "react";
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 const SalesSummaryCard = () => {
   const { data, isLoading, isError } = useGetDashboardMetricsQuery();
@@ -79,6 +85,9 @@ const SalesSummaryCard = () => {
               </select>
             </div>
             {/* CHART */}
+
+            {/* TODO: Need to make it dynamic according to timeframe */}
+
             <ResponsiveContainer width="100%" height={350} className="px-7">
               <BarChart
                 data={salesData}

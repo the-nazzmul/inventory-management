@@ -1,8 +1,7 @@
-"use client";
 import { useGetDashboardMetricsQuery } from "@/state/api";
 import { ShoppingBagIcon } from "lucide-react";
 import React from "react";
-import Rating from "./Rating";
+import Rating from "../Rating";
 
 function PopularProductsCard() {
   const { data: dashboardMetrics, isLoading } = useGetDashboardMetricsQuery();
