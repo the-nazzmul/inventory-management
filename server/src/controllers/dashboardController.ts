@@ -40,17 +40,19 @@ export const getDashboardMatrics = async (
         },
       }
     );
-    const exprenseByCategory = expenseByCategorySummaryRaw.map((item) => ({
-      ...item,
-      amount: item.amount.toString(),
-    }));
+    const expenseByCategorySummary = expenseByCategorySummaryRaw.map(
+      (item) => ({
+        ...item,
+        amount: item.amount.toString(),
+      })
+    );
 
     res.json({
       popularProducts,
       salesSummary,
       purchaseSummary,
       expenseSummary,
-      exprenseByCategory,
+      expenseByCategorySummary,
     });
   } catch (error) {
     res.status(500).json({ message: "Error retriving Dashboard matrics" });

@@ -44,13 +44,13 @@ const getDashboardMatrics = (req, res) => __awaiter(void 0, void 0, void 0, func
                 date: "desc",
             },
         });
-        const exprenseByCategory = expenseByCategorySummaryRaw.map((item) => (Object.assign(Object.assign({}, item), { amount: item.amount.toString() })));
+        const expenseByCategorySummary = expenseByCategorySummaryRaw.map((item) => (Object.assign(Object.assign({}, item), { amount: item.amount.toString() })));
         res.json({
             popularProducts,
             salesSummary,
             purchaseSummary,
             expenseSummary,
-            exprenseByCategory,
+            expenseByCategorySummary,
         });
     }
     catch (error) {
