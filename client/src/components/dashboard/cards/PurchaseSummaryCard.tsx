@@ -37,6 +37,7 @@ const PurchaseSummaryCard = () => {
               <p className="text-xs text-gray-400">Purchesed</p>
               <div className="flex items-center">
                 <p className="text-2xl font-bold">
+                  $
                   {lastDataPoint
                     ? numeral(lastDataPoint.totalPurchased).format("0.00a")
                     : "0"}

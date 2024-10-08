@@ -16,6 +16,7 @@ const SalesSummaryCard = () => {
   const salesData = data?.salesSummary || [];
 
   const [timeFrame, setTimeFrame] = useState("weekly");
+  
   const totalValueSum =
     salesData.reduce((acc, curr) => acc + curr.totalValue, 0) || 0;
 
@@ -30,9 +31,9 @@ const SalesSummaryCard = () => {
 
   const highestValueDate = highestValueData.date
     ? new Date(highestValueData.date).toLocaleDateString("en-US", {
-        month: "numeric",
-        day: "numeric",
-        year: "2-digit",
+        month: "long",
+        day: "2-digit",
+        year: "numeric",
       })
     : "N/A";
 
